@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Profile</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <form class="mt-2" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="mt-2" type="submit">Submit</button>
+    </form>
+    <br>
+</div>
+{% endblock %}
